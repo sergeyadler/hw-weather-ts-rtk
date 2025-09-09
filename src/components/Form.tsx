@@ -8,9 +8,8 @@ const Form = () => {
 
     const getCity: React.FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault();
-        const q = city.trim();
-        if (!q) return;               // не шлём пустоту
-        dispatch(fetchWeather(q));    // полетели за погодой
+                     // не шлём пустоту
+        dispatch(fetchWeather(city));    // полетели за погодой
         setCity("");
     };
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
